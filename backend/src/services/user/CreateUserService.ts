@@ -29,6 +29,11 @@ class CreateUserService{
             name: name,
             email: email,
             password: password,
+        },
+        select:{
+            id: true,
+            name: true,
+            email: true,
         }
     });
 
