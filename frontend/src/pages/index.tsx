@@ -1,9 +1,14 @@
-import styles  from '../../styles/Home.module.scss';
+import Head  from '../../node_modules/next/head';
 
 export default function Home() {
   return (
-    <div className={styles.container} >
-        <h1> Willian </h1>
+    <>
+    <Head>
+      <title> Pizzaria - Faça seu Login</title>
+    </Head>
+    <div>
+      <h1>Pizzaria</h1>
     </div>
+    </>
   )
 }
