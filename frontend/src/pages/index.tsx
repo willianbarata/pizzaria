@@ -6,6 +6,8 @@ import logoImg from '../../public/logo.svg';
 
 import { Input } from '../components/ui/input';
 
+import { Button } from '../components/ui/button';
+
 export default function Home() {
   return (
     <>
@@ -25,6 +27,14 @@ export default function Home() {
               placeholder="Digite sua senha"
               type="password"
             />
+
+            <Button 
+              type="submit"
+              loading={false}
+            > 
+              Cadastrar
+            </Button>
+
           </form>
 
         </div>
