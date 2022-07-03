@@ -17,7 +17,7 @@ export default function Home() {
     <div className={styles.containerCenter}>
         <Image src={logoImg} alt="Logo pizzaria"/>
 
-        <div className=''>
+        <div className={styles.login}>
           <form>
             <Input 
               placeholder="Digite seu email"
@@ -32,10 +32,12 @@ export default function Home() {
               type="submit"
               loading={false}
             > 
-              Cadastrar
+              Acessar
             </Button>
 
           </form>
+
+          <a className={styles.text}> Não possui uma conta? Cadastre-se</a>
 
         </div>
     </div>
