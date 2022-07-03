@@ -1,7 +1,7 @@
 import Head from '../../../node_modules/next/head';
 import Image from '../../../node_modules/next/image';
 import styles from '../../../styles/home.module.scss';
-import { FormEvent, useState } from 'react';
+import { FormEvent, useState, useContext } from 'react';
 import logoImg from '../../../public/logo.svg';
 
 import Link from '../../../node_modules/next/link';
@@ -9,7 +9,11 @@ import Link from '../../../node_modules/next/link';
 import { Input } from '../../components/ui/Input/index';
 import { Button } from '../../components/ui/Button/index';
 
-export default function Home() {
+import { AuthContext } from '../../context/AuthContext';
+
+export default function SignUp() {
+
+  const { signUp } = useContext(AuthContext)
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -26,6 +30,16 @@ export default function Home() {
     }
 
     setLoading(true);
+
+    let data = {
+      name,
+      email,
+      password
+    }
+
+    await signUp(data)
+
+    setLoading(false)
   }
 
   return (
