@@ -4,8 +4,9 @@ import styles from '../../styles/home.module.scss';
 
 import logoImg from '../../public/logo.svg';
 
-import { Input } from '../components/ui/input';
+import Link from '../../node_modules/next/link';
 
+import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
 
 export default function Home() {
@@ -37,7 +38,10 @@ export default function Home() {
 
           </form>
 
-          <a className={styles.text}> Não possui uma conta? Cadastre-se</a>
+          <Link href="/signup">
+              <a className={styles.text}> Não possui uma conta? Cadastre-se</a>
+          </Link>
+          
 
         </div>
     </div>
