@@ -6,6 +6,8 @@ import logoImg from '../../../public/logo.svg';
 
 import Link from '../../../node_modules/next/link';
 
+import { toast } from 'react-toastify'
+
 import { Input } from '../../components/ui/Input/index';
 import { Button } from '../../components/ui/Button/index';
 
@@ -25,7 +27,7 @@ export default function SignUp() {
     event.preventDefault();
 
     if(name === ''  || email === '' || password === ''){
-      alert("Preencha todos os campos")
+      toast.warning('Preencha todos os campos')
       return;
     }
 

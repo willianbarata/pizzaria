@@ -7,6 +7,8 @@ import logoImg from '../../public/logo.svg';
 
 import Link from '../../node_modules/next/link';
 
+import { canSSRGuest } from '../utils/canSSRGuest'
+
 import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
 
@@ -81,3 +83,9 @@ export default function Home() {
     </>
   )
 }
+
+export const getServerSideProps = canSSRGuest(async (ctx) => {
+    return{
+      props: {}
+    }
+} )
